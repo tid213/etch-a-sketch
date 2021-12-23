@@ -4,8 +4,9 @@ function makeRows(rows, cols){
     container.style.setProperty('--grid-cols', cols);
     for (i=0; i<(rows * cols); i++){
         var cell = document.createElement("div");
-        /*cell.innerText = (i + 1);*/
-        container.appendChild(cell).id = "grid-item";
+        cell.id = "grid-item";
+        cell.onmouseover = randomColor;
+        container.appendChild(cell);
     }
 }
 
@@ -18,8 +19,9 @@ function generateColor(){
 
 
 function randomColor(){
-    var container = document.getElementById("container");
-    container.style.backgroundColor = generateColor();
+    this.style.backgroundColor = generateColor();
 }
+
+
 
 
