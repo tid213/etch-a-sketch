@@ -4,15 +4,20 @@
     <title>Etch-A-Sketch</title>
     <link rel="stylesheet" href="styles.css">
     <script src="styles.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shizuru&display=swap" rel="stylesheet">
 </head>
-<body onload="makeRows(16, 16)">
+<body onload="makeRows()">
+    
     <div id="menu">
-        <button>Reset</button>
-        <button id="redB">Red</button>
-        <button id="blueB">Blue</button>
-        <button id="greenB">Green</button>
-        <button id="purpleB">Purple</button>
-        <button id="blackB">Black</button>
+        <button onclick="resetPage()" id="resetB">Reset</button>
+        <button onclick ="redCount()" id="redB">Red</button>
+        <button onclick = "blueCount()"id="blueB">Blue</button>
+        <button onclick = "greenCount()" id="greenB">Green</button>
+        <button onclick = "purpleCount()" id="purpleB">Purple</button>
+        <button onclick = "blackCount()" id="blackB">Black</button>
+        <button onclick = "rainbowCount()" id="rainbowB">Rainbow</button>
     </div>
     <div id="container"></div>
     <div id="blank"></div>
